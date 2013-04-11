@@ -1,4 +1,4 @@
 kun-g.github.com
 ================
 
-oooo
+为道日损
