@@ -3,10 +3,13 @@ pygments: true
 paginate: 20
 lsi: true
 baseurl: /
+img_url: /images
 
 source:      .
 destination: ./_site
 plugins:     ./_plugins
+
+
 
 #markdown: maruku
 #Exclude: README.md

@@ -3,6 +3,24 @@ layout: homepage
 title: 为道
 ---
 <h2>{{ page.title }}</h2>
+
+![Git]({{ site.img_url }}/bkg.png)
+
+`int i = 0`
+
+代码高亮:
+* gist
+* google-code-prettify
+* pygments
+* jsfiddle
+
+
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 <p> 最新文章 </p>
 <ul>
   {% for p in site.posts %}
@@ -17,7 +35,7 @@ title: 为道
   {% endfor %}
 </ul>
 
-<p> Tags </p>
+<p> Tags:  </p>
 <ul>
   {% for p in site.tags.TAG %}
     <li>{{ p.date | date_to_string }} <a href="{{ p.url }}"> {{ p.title }}</a></li>
@@ -25,5 +43,9 @@ title: 为道
 </ul>
 <p>Perpage {{ paginator.per_page }}</p>
 <p>posts {{ paginator.total_posts }}</p>
+<p>{{ page.content | number_of_words }} </p>
+
+{{ site.posts | array_to_sentence_string }}
+
 {{site.time}}
 

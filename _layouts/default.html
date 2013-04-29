@@ -5,58 +5,31 @@
 　　<title>{{ page.title }}</title>
     <meta name="description" content="Kun.G's Blog">
     <meta name="keywords" content="Programming, Game Dev, Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" type="application/atom+xml" title="ATOM Feed for Kun.G's Blog" href="{{ site.blog_feed_url }}">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
-    <link rel="stylesheet" type="text/css" href="http://kun-g.github.com/blog/media/css/prettify/prettify.css">
-    <script type="text/javascript" src="http://kun-g.github.com/blog/media/css/prettify/prettify.js"></script>
+    <link rel="stylesheet" media="screen" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="/bootstrap/css/bootstrap-responsive.min.css">
 </head>
-<body onload="prettyPrint()"> 
-    <div class="standard-page">
-
-      <div class="head">
-        {% include html/head.html %}
-      </div>
-
-      <div class="body">
-        <div class="main">
-          <div class="hd"></div>
-          <div class="bd">{{ content }}</div>
-          <div class="ft"></div>
-
-          <!-- JiaThis Button BEGIN -->
-          <div class="jiathis_style">
-            <span class="jiathis_txt">分享到：</span>
-            <a class="jiathis_button_tools_1"></a>
-            <a class="jiathis_button_tools_2"></a>
-            <a class="jiathis_button_tools_3"></a>
-            <a class="jiathis_button_tools_4"></a>
-            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-            <a class="jiathis_counter_style"></a>
-          </div>
-          <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1353423536681578" charset="utf-8"></script>
-          <!-- JiaThis Button END -->
-          <div id="disqus_thread"></div>
-          <script type="text/javascript">
-          (function() {
-           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-           dsq.src = 'http://' +  'nukoug' + '.disqus.com/embed.js';
-           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-           })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-          <div class="aux">
-            {% include html/sidebar.html %}
-          </div>
-        </div>
-
-        </div>
-
-      <div class="foot">
-        {% include html/foot.html %}
-      </div>
+<body> 
+  <div class="standard-page">
+    <div class="head">
+      {% include html/head.html %}
     </div>
-  </body>
+
+    <div class="body">
+      <div class="main">
+        <div class="hd"></div>
+        <div class="bd">{{ content }}</div>
+        <div class="ft"></div>
+
+
+    <div class="foot">
+      {% include html/foot.html %}
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
