@@ -1,0 +1,59 @@
+---
+title: 标签
+layout: default
+---
+
+<div class="page-header"> <h1></h1> </div> 
+<div id="show-tag"></div>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script>
+  function showTag(tagStr) {
+    var tags = [{% for t in site.tags %}'{{t[0]}}'{% if forloop.last == false %}, {% endif %}{% endfor %}];
+    $.getJSON("/post.json", function(data) {
+      var content = '';
+      if (tagStr == "") {
+        $('div.page-header h1').text("所有标签");
+        for (t in tags) {
+          content += '<span class="label label-info"><a href="/tags?tag='+tags[t]+'">'+tags[t]+'</a></span>  ';
+        }
+      } else {
+        var count = 0;
+        $.each(data, function(i, item) {
+          $.each(item.tags, function(j, tag) {
+            if (tag == tagStr) {
+              content += "<li class=\"listing-item\"><time datetime=\"" + item.date + "\">" + item.date + "</time><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+              count++;
+            }
+          });
+        });
+        if (count > 0) {
+          var postNumStr = "<small>（" + count + "篇文章）</small>";
+          $('div.page-header h1').text("分类："+tagStr);
+          $('div.page-header h1').append(postNumStr);
+          content += "</ul>";
+          console.log(content);
+        }
+      }
+      $('#show-tag').empty(content);
+      $('#show-tag').append(content);
+    });
+  }
+
+  $(document).ready(function() {
+    var href = window.location.href;
+    var pos = href.indexOf('?tag=');
+    var paraStr = href.substring(pos + 5);
+    if (pos > 0) {
+      showTag(decodeURI(paraStr));
+      } else {
+      showTag("");
+    }
+  });
+
+</script>
+
+
+
+

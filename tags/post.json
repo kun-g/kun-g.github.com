@@ -2,11 +2,13 @@
 layout: nil
 ---
 
-[{% for p in site.posts limit: 5 %}
+[{% for p in site.posts%}
   {
     "title": "{{p.title}}",
     "url": "{{site.url}}{{p.url}}",
     "date": "{{p.date|date_to_string}}"
+    "tags": [{% for tag in p.tags %}"{{tag}}"{% if forloop.last == false %}, {% endif %}{% endfor %}]
+  "{{p.date|date_to_string}}"
   }{% if forloop.last == false %}, {% endif %}
  {% endfor %}
 ]

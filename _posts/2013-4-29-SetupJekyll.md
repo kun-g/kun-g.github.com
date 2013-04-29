@@ -1,12 +1,17 @@
 ---
-layout: default
+layout: post
 title: "设置Jekyll"
-categories: Tools
+tags: Tool Jekyll 
+categories: Blog
 cover: "http://twitter.github.io/bootstrap/assets/img/examples/slide-01.jpg" 
 headLine: "我使用Jekyll的流程"
 ---
 
 ![Git]({{site.img_url}}/bkg.png)
+
+  {% for p in site.related_posts %}
+    <li>{{ p.date | date_to_string }} <a href="{{ p.url }}"> {{ p.title }}</a></li>
+  {% endfor %}
 
 调用json  
 {% highlight js linenos %}
@@ -17,9 +22,7 @@ $(document).ready(function() {
       var content = "<ul class=\"compact recent\">";
       $.each(data,
         function(i, item) {
-
         content += "<li><span class=\"date\">" + item.date + "</span><a href=\"" + item.url + "\">" + item.title + "</a></li>";
-
         });
 
       content += "</ul>";
@@ -52,5 +55,6 @@ int inc(int arg) {
   return arg + 1;
 }
 {% endhighlight %}
+
 
 <p>{{ page.content | number_of_words }}</p>

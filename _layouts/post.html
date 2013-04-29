@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <h1>{{page.title}}</h1>
+</div>
+
+{{ content }}
+
+标签:
+{% for t in page.tags %}
+<span class="label label-info"><a href="/tags?tag={{t}}">{{t}}</a></span> 
+{% endfor %}
+
+<hr class="bs-docs-separator">
+
+<ul class="pager">
+  {% if page.next %}
+  <li class="previous"><a href="{{page.next.url}}">&larr; {{ page.next.title }}</a></li>
+  {% endif %}
+  {% if page.previous %}
+  <li class="next"><a href="{{page.previous.url}}">{{ page.previous.title }} &rarr;</a></li>
+  {% endif %}
+</ul>
+
