@@ -1,6 +1,6 @@
 auto: true
 pygments: true
-paginate: 20
+paginate: 2
 lsi: true
 baseurl: /
 img_url: /images
