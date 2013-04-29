@@ -1,5 +1,12 @@
 auto: true
 pygments: true
-paginate: true
+paginate: 20
+lsi: true
+baseurl: /
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
 
 #markdown: maruku
+#Exclude: README.md
