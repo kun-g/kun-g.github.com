@@ -2,9 +2,32 @@
 layout: default
 title: "设置Jekyll"
 categories: Tools
+cover: "http://twitter.github.io/bootstrap/assets/img/examples/slide-01.jpg" 
+headLine: "我使用Jekyll的流程"
 ---
 
 ![Git]({{site.img_url}}/bkg.png)
+
+调用json  
+{% highlight js linenos %}
+<script type="text/javascript">
+$(document).ready(function() {
+    $.getJSON("/cn/recent.json",
+      function(data) {
+      var content = "<ul class=\"compact recent\">";
+      $.each(data,
+        function(i, item) {
+
+        content += "<li><span class=\"date\">" + item.date + "</span><a href=\"" + item.url + "\">" + item.title + "</a></li>";
+
+        });
+
+      content += "</ul>";
+      $("#blog1-posts-list").append(content);
+      });
+    });
+</script>
+{% endhighlight %}
 
 
 代码高亮:
@@ -12,6 +35,11 @@ categories: Tools
 * google-code-prettify
 * pygments
 * jsfiddle
+
+{% highlight js linenos %}
+var a = 0;
+a += 1;
+{% endhighlight %}
 
 {% highlight ruby linenos %}
 def foo

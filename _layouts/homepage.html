@@ -3,24 +3,91 @@
 <head>
   {% include head.html %}
 </head>
-<body onload="prettyPrint()"> 
-    <div class="standard-page">
+<body> 
+  <!-- NAVBAR
+  ================================================== -->
+  <div class="navbar-wrapper">
+    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="container">
 
-      <div class="head">
-      </div>
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar. Include responsive CSS to utilize. -->
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">{{page.title}}</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#contact">博客</a></li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Little Ninja Rush</a></li>
+                <li><a href="#">Project D</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Private Projects</li>
+                <li><a href="#">env</a></li>
+                <li><a href="#">crawl</a></li>
+              </ul>
+              <li><a href="#about">关于我</a></li>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
 
-      <div class="body">
-        <div class="main">
-          <div class="hd"></div>
-          <div class="bd">{{ content }}</div>
-          <div class="ft"></div>
-        </div>
-      </div>
+    </div> <!-- /.container -->
+  </div><!-- /.navbar-wrapper -->
 
-      <div class="foot">
-        {% include foot.html %}
-      </div>
 
-    </div>
+  {{ content }}
+
+  <hr class="featurette-divider">
+  <!-- FOOTER -->
+  <footer>
+  <div class="foot">
+    {% include foot.html %}
+  </div>
+  {{site.time | date_to_string}}
+  <p class="pull-right"><a href="#">Back to top</a></p>
+  <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+</div><!-- /.container -->
+
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap-transition.js"></script>
+<script src="bootstrap/js/bootstrap-alert.js"></script>
+<script src="bootstrap/js/bootstrap-modal.js"></script>
+<script src="bootstrap/js/bootstrap-dropdown.js"></script>
+<script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+<script src="bootstrap/js/bootstrap-tab.js"></script>
+<script src="bootstrap/js/bootstrap-tooltip.js"></script>
+<script src="bootstrap/js/bootstrap-popover.js"></script>
+<script src="bootstrap/js/bootstrap-button.js"></script>
+<script src="bootstrap/js/bootstrap-collapse.js"></script>
+<script src="bootstrap/js/bootstrap-carousel.js"></script>
+<script src="bootstrap/js/bootstrap-typeahead.js"></script>
+<script>
+  !function ($) {
+    $(function(){
+      // carousel demo
+      $('#myCarousel').carousel()
+    })
+  }(window.jQuery)
+</script>
+<script src="http://twitter.github.io/bootstrap/assets/js/holder/holder.js"></script>
+
+
   </body>
 </html>

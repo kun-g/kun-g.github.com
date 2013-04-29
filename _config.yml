@@ -15,7 +15,7 @@ permalink: /:categories/:title
 
 #markdown: maruku
 Exclude: README.md, ./sketch
-#title : Jekyll Bootstrap
+title : Kun.G 的网络日志
 #tagline: Site Tagline
 #author :
 #  name : Name Lastname
