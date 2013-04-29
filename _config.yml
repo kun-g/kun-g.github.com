@@ -3,6 +3,7 @@ pygments: true
 paginate: 2
 lsi: true
 baseurl: /
+url: http://kun-g.github.io
 img_url: /images
 
 source:      .
@@ -13,7 +14,7 @@ permalink: /:categories/:title
 
 
 #markdown: maruku
-#Exclude: README.md
+Exclude: README.md, ./sketch
 #title : Jekyll Bootstrap
 #tagline: Site Tagline
 #author :
