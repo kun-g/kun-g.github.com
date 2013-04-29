@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-　　<title>{{ page.title }}</title>
-    <meta name="description" content="Kun.G's Blog">
-    <meta name="keywords" content="Programming, Game Dev, Blog">
-    <link rel="alternate" type="application/atom+xml" title="ATOM Feed for Kun.G's Blog" href="{{ site.blog_feed_url }}">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
-    <link rel="stylesheet" type="text/css" href="http://kun-g.github.com/blog/media/css/prettify/prettify.css">
-    <link rel="stylesheet" type="text/css" href="https://kun-g.github.com/stylesheets/pygments.css">
-    <script type="text/javascript" src="http://kun-g.github.com/blog/media/css/prettify/prettify.js"></script>
+  {% include head.html %}
 </head>
 <body onload="prettyPrint()"> 
     <div class="standard-page">
 
       <div class="head">
-        {% include html/head.html %}
       </div>
 
       <div class="body">
@@ -28,7 +18,7 @@
       </div>
 
       <div class="foot">
-        {% include html/foot.html %}
+        {% include foot.html %}
       </div>
 
     </div>
