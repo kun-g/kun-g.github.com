@@ -9,6 +9,7 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 
+permalink: /:categories/:title
 
 
 #markdown: maruku

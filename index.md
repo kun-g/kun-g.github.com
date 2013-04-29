@@ -41,6 +41,8 @@ int inc(int arg) {
   {% endfor %}
 </ul>
 
+{{ site.tags | array_to_sentence_string }}
+
 <p> Tags:  </p>
 <ul>
   {% for p in site.tags.TAG %}
@@ -52,4 +54,5 @@ int inc(int arg) {
 <p>{{ page.content | number_of_words }}</p>
 
 {{site.time}}
+
 
