@@ -21,6 +21,12 @@ def foo
 end
 {% endhighlight %}
 
+{% highlight c linenos %}
+int inc(int arg) {
+  return arg + 1;
+}
+{% endhighlight %}
+
 <p> 最新文章 </p>
 <ul>
   {% for p in site.posts %}
@@ -43,9 +49,7 @@ end
 </ul>
 <p>Perpage {{ paginator.per_page }}</p>
 <p>posts {{ paginator.total_posts }}</p>
-<p>{{ page.content | number_of_words }} </p>
-
-{{ site.posts | array_to_sentence_string }}
+<p>{{ page.content | number_of_words }}</p>
 
 {{site.time}}
 
