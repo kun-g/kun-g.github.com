@@ -3,3 +3,16 @@ pygments: true
 paginate: true
 
 #markdown: maruku
+#permalink: /:categories/:year/:month/:day/:title 
+
+exclude: ["README.md"]
+#
+#title : Jekyll Bootstrap
+#tagline: Site Tagline
+#author :
+#  name : Name Lastname
+#  email : blah@email.test
+#  github : kun-g
+#  twitter : username
+#  #weibo: @郭坤Freedom
+#
