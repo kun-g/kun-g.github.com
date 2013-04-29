@@ -8,3 +8,43 @@
   <link rel="stylesheet" type="text/css" href="http://kun-g.github.io/stylesheets/pygments.css">
   <link rel="stylesheet" media="screen" href="http://kun-g.github.io/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" media="screen" href="http://kun-g.github.io/bootstrap/css/bootstrap-responsive.min.css">
+
+  <!-- NAVBAR
+  ================================================== -->
+  <div class="navbar-wrapper">
+    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="container">
+
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar. Include responsive CSS to utilize. -->
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">{{site.title}}</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#contact">博客</a></li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Little Ninja Rush</a></li>
+                <li><a href="#">Project D</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Private Projects</li>
+                <li><a href="#">env</a></li>
+                <li><a href="#">crawl</a></li>
+              </ul>
+              <li><a href="#about">关于我</a></li>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
+
+    </div> <!-- /.container -->
+  </div><!-- /.navbar-wrapper -->
