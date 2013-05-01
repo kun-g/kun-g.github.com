@@ -7,6 +7,8 @@ cover: "http://twitter.github.io/bootstrap/assets/img/examples/slide-01.jpg"
 headLine: "我使用Jekyll的流程"
 ---
 
+我是测试文章
+
 ![Git]({{site.img_url}}/bkg.png)
 
   {% for p in site.related_posts %}
