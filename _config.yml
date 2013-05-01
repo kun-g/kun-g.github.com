@@ -12,7 +12,7 @@ plugins:     ./_plugins
 
 permalink: /:categories/:title
 
-markdown: redcarpet
+#markdown: redcarpet
 Exclude: README.md, ./sketch
 title : Kun.G的网络日志
 #tagline: Site Tagline
