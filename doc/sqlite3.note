@@ -1,0 +1,90 @@
+== Time ==
+===Functions===
+* date(timestring, modifier, modifier,...)
+* time(timestring, modifier, modifier,...)
+* datetime(timestring, modifier, modifier,...)
+* julianday(timestring, modifier, modifier,...)
+* strftime(format,timestring, modifier, modifier,...)
+  strftime substitutions
+  %d		 day of month: 00
+  %f		 fractional seconds: SS.SSS
+  %H		 hour: 00-24
+  %j		 day of year: 001-366
+  %J		 Julian day number
+  %m		 month: 01-12
+  %M		 minute: 00-59
+  %s		 seconds since 1970-01-01
+  %S		 seconds: 00-59
+  %w		 day of week 0-6 with Sunday==0
+  %W		 week of year: 00-53
+  %Y		 year: 0000-9999
+  %%		 %
+
+===Time Strings===
+
+A time string can be in any of the following formats:
+
+* YYYY-MM-DD
+* YYYY-MM-DD HH:MM
+* YYYY-MM-DD HH:MM:SS
+* YYYY-MM-DD HH:MM:SS.SSS
+* YYYY-MM-DDTHH:MM
+* YYYY-MM-DDTHH:MM:SS
+* YYYY-MM-DDTHH:MM:SS.SSS
+* HH:MM
+* HH:MM:SS
+* HH:MM:SS.SSS
+* now
+* DDDDDDDDDD
+
+===Modifiers===
+
+The time string can be followed by zero or more modifiers that alter date and/or time. 
+Each modifier is a transformation that is applied to the time value to its left. 
+Modifiers are applied from left to right; order is important. 
+The available modifiers are as follows.
+
+* ±NN days
+* ±NN hours
+* ±NN minutes
+* ±NN.NNNN seconds
+* ±NN months
+* ±NN years
+* start of month
+* start of year
+* start of day
+* weekday N
+* unixepoch
+* localtime
+* utc
+
+===Examples===
+
+Compute the current date.
+
+SELECT date('now');
+Compute the last day of the current month.
+
+SELECT date('now','start of month','+1 month','-1 day');
+Compute the date and time given a unix timestamp 1092941466.
+
+SELECT datetime(1092941466, 'unixepoch');
+Compute the date and time given a unix timestamp 1092941466, and compensate for your local timezone.
+
+SELECT datetime(1092941466, 'unixepoch', 'localtime');
+Compute the current unix timestamp.
+
+SELECT strftime('%s','now');
+Compute the number of days since the signing of the US Declaration of Independence.
+
+SELECT julianday('now') - julianday('1776-07-04');
+Compute the number of seconds since a particular moment in 2004:
+
+SELECT strftime('%s','now') - strftime('%s','2004-01-01 02:34:56');
+Compute the date of the first Tuesday in October for the current year.
+
+SELECT date('now','start of year','+9 months','weekday 2');
+Compute the time since the unix epoch in seconds (like strftime('%s','now') except includes fractional part):
+
+SELECT (julianday('now') - 2440587.5)*86400.0;
+

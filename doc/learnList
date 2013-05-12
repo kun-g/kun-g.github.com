@@ -1,0 +1,150 @@
+
+mknod
+readlink
+
+== 文件处理
+dd
+
+== 网络-域名
+hostname
+domainname
+dnsdomainname
+
+ip
+ping
+ping6
+nslookup
+netstat
+mtr
+
+tcpdump
+iptables
+ifconfig
+iwconfig
+dhclient
+wget
+curl
+
+== 键盘
+dumpkeys
+loadkeys
+showkey
+xmodmap -> .xprofile
+kbd_mode
+
+== 磁盘管理
+df
+du
+mount
+mountpoint
+umount
+
+== 系统信息
+time
+w
+whoami
+uname -a
+lsmod
+
+== 进程管理
+fuser
+pidof
+kill
+killall
+ps
+
+uptime
+
+wc
+finger
+
+== 文件查找
+where
+whereis
+locate
+find
+
+xargs
+vmstat
+lsof
+top
+bg
+fg
+dig
+free
+diff
+patch
+shred
+yes
+xev
+factor
+strace
+ltrace
+valgrind
+fdisk
+lsusb
+
+== 文件管理-压缩
+bunzip2
+bzcat
+bzcmp
+bzdiff
+bzgrep
+bzegrep
+bzfgrep
+bzexe
+bzip2
+bzip2recover
+bzless
+bzmore
+tar
+gzip
+gzexe
+gunzip
+zcat
+zcmp
+zdiff
+zegrep
+zfgrep
+zforce
+zgrep
+zless
+zmore
+znew
+uncompress
+
+=== 小工具 ===
+不太复杂，可以很快上手，但是需要练习一段时间
+SQLite
+nc
+ nc dict.org 2628
+ mkfifo bakpipe
+ nc -l 12345 0<bakpipe | nc server port 1>bakpipe
+regular expression
+MediaWiki
+Wordpress
+conky
+sed
+awk
+apt-get
+Tracker Video analysis
+Truecrypt
+cron
+cscope
+bash
+busybox
+
+=== 大工具 ===
+复杂，需长期/系统的练习才能掌握，但是功能强大，值得拥有
+LUA
+Python
+VIM
+ :lvimgrep
+ :help folding
+ :help usr_29.txt
+ :help ins-special-special
+ :help usr_03.txt
+ :help motion.txt
+GDB
+算法
+Calibre

@@ -1,0 +1,24 @@
+Manipulating Rightmost Bits
+# x&(x-1)
+# turn off the rightmost 1-bit in a word.may be used to determine if an unsigend integer is a power of 2 
+# x&(x+1)
+# test if an unsigned integer is of the form 2^n - 1 : 
+# x&(-x)
+# isolate the rightmost 1-bit
+# !x&(x+1)
+# isolate the rightmost 0-bit
+# !x&(x-1)
+# form a mask that identifies the trailing 0's
+# !(x|-x)
+# form a mask that identifies the trailing 0's
+# (x&--x)-1
+# form a mask that identifies the trailing 0's
+# x^(x-1)
+# for a mask that identifies the rightmost 1-bit and the trailing 0's
+# x | (x-1)
+# right-propagate the rightmost 1-bit
+# ((x|(x-1)+1)&x
+# turn off the rightmost contiguous string of 1-bits;this may be used to see if a nonnegative integer is of the form 2^j - 2^k for j >= k >= 0;apply the formula followed by a 0-test of the result
+These formulas above all have duals in the following sense.Read what the formula dose, interchanging 1's and 0's in the description.Then, in the formula, replace x-1 with x+1, x+1 with x-1, -x with !(x+1), & with |, and | with &. Leave x and !x alone. Then the result is a valid description and formula.
+
+#Theorem A function mapping words to words can be implemented with word-parallel add,subtract,and,or,and not instructions if and only if each bit of the result depends only on bits at and to the right of each input operand.
